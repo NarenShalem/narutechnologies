@@ -1,0 +1,56 @@
+<div class="window">
+<header class="toolbar toolbar-header">
+  <div ng-include ="'head.html'"></div>
+</header>
+
+  <div class="window-content">
+  <div class="pane-group">
+  <div class="pane-sm sidebar" style="background-color:#9ed3d2;">
+           <div ng-include ="'slide.html'"></div>
+</div>
+<div class="pane">
+<div>
+<header class="toolbar toolbar-header">
+  <h3>Todo-Form</h3>
+    </header>
+</div>
+
+<div>
+  <form name="form" novalidate>  
+            
+<!-- FirstName -->
+<div class="form-group" >
+    <span class="icon icon-user"></span>&nbsp;NetworkName
+    <input type="text" name="NetworkName" class="form-control"                ng-model="todo.NetworkName"   required/>
+    <span ng-show="form.$dirty && form.NetworkName.$error.required">This is a required field</span>
+    <span ng-show="form.$dirty && form.NetworkName.$invalid">This field is invalid </span>
+</div>
+<div class="form-group" >
+    <span class="icon icon-user"></span>&nbsp;state
+    <input type="text" name="state" class="form-control"                       ng-model="todo.state"   required/>
+    <span ng-show="form.$dirty && form.state.$error.required">This is a required field</span>
+    <span ng-show="form.$dirty && form.state.$invalid">This field is invalid </span>
+</div>
+<div class="form-group">
+    <span class="icon icon-user"></span>&nbsp;Amount
+    <input type="text" name="Amount" class="form-control"                      ng-model="todo.Amount"   required/>
+    <span ng-show="form.$dirty && form.Amount.$error.required">This is a required field</span>
+    <span ng-show="form.$dirty && form.Amount.$invalid">This field is invalid </span>
+</div>
+
+</div> 
+    <div class="form-group">      
+<button ng-click="todoinsertCustomer(customer)"  class="btn btn-primary" ng-disabled="frm.$invalid">Submit</button>
+   <input type="reset" class="btn btn-primary" value="Reset"/>  
+   <a href="#todo"><button  class="btn btn-primary">Back</button></a>  
+</div>
+</form>
+</div>
+
+  
+</div>
+
+</div>
+</div>
+</div>
+

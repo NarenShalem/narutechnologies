@@ -1,0 +1,41 @@
+<div class="window" >
+<header class="toolbar toolbar-header">
+  <div ng-include="'head.html'"></div>
+</header>
+
+<div class="window-content">
+  <div class="pane-sm sidebar" style="background-color:#9ed3d2;">
+           <div ng-include="'slide.html'"></div>
+  </div>
+<div class="pane">
+<div><a href="#todocustomer"><button ng-click="addtodo()" class="btn btn-primary">AddTodo</button></a></div>
+<div><h3>TodDataHere</h3></div>
+  <div>
+    <table class="table table-striped" border='2px' >
+      <thead style="border:2px;padding-left:10px;">
+      <tr>
+        <th>NetworkName</th>
+        <th>State</th>
+        <th>Amount</th>
+        <th></th>
+        <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{{todo.NetworkName}}</td>
+          <td>{{todo.state}}</td>
+          <td>{{todo.Amount}}</td>
+      <td><button class="btn btn-primary" ng-click="edittodo(todo)">Edit</button></td>
+      <td><button class="btn btn-primary" ng-click="deletetodo(todo)">Delete</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>
+</div>
+
+
+
+ 
